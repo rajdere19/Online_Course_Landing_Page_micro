@@ -1,0 +1,207 @@
+body {
+    background: #f8fafc;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+/* Top Menu */
+.TopMenu {
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(to right, #a8c0ff, #3ff8f5);
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* Container */
+.container {
+    padding: 30px;
+    background: hsl(204, 100%, 97%);
+    min-height: 100vh;
+}
+
+/* Lottie */
+#lottie-container {
+    width: 100%;
+    height: 380px;
+    margin: 0 auto 30px auto;
+    background: rgb(213, 233, 255);
+    border-radius: 20px;
+}
+
+/* Card Grid Layout — keep laptop look */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+/* Cards — laptop default */
+.card {
+    width: 420px;
+    height: 160px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #e5e7eb;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.03);
+    border-image: linear-gradient(
+        to right,
+        #756af0,
+        #e24a9b,
+        #bc66d2
+    ) 2;
+}
+
+/* Card Content */
+.card-content {
+    width: 60%;
+}
+
+.card-content h3 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+}
+
+.card-content p {
+    font-size: 15px;
+    color: #4d8cf9;
+}
+
+/* Image */
+.card-img {
+    width: 160px;
+    height: 130px;
+    object-fit: contain;
+}
+
+/* Card Colors */
+.card-1 { background: #fff9f3; }
+.card-2 { background: #f7faff; }
+.card-3 { background: #fffdec; }
+.card-4 { background: #fceaff; }
+.card-5 { background: #f6ffff; }
+.card-6 { background: #edfff6; }
+
+/* ✅ MOBILE FIX — DOES NOT TOUCH LAPTOP */
+
+
+@media (max-width: 768px) {
+
+    .container {
+        padding: 16px;
+    }
+
+    #lottie-container {
+        height: 220px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card-content {
+        width: 100%;
+    }
+
+    .card-img {
+        width: 100%;
+        height: auto;
+        max-height: 140px;
+        margin-top: 10px;
+    }
+
+    .TopMenu {
+        height: 60px;
+        font-size: 20px;
+    }
+}
+
+/* =========================
+   STRONG MOBILE FIX
+========================= */
+
+@media (max-width: 768px) {
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    /* Top bar smaller */
+    .TopMenu {
+        height: 52px;
+        font-size: 18px;
+        padding-left: 12px;
+    }
+
+    /* Lottie smaller */
+    #lottie-container {
+        height: 100px;
+        margin-bottom: 18px;
+    }
+
+    /* Grid = single column */
+    .card-grid {
+        grid-template-columns: 1fr !important;
+        gap: 14px;
+    }
+
+    /* Card FULL WIDTH + SMALL */
+    .card {
+        width: 100% !important;
+        height: auto !important;
+        padding: 14px;
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 16px;
+    }
+
+    /* Text full width */
+    .card-content {
+        width: 100%;
+    }
+
+    .card-content h3 {
+        font-size: 16px;
+    }
+
+    .card-content p {
+        font-size: 13px;
+    }
+
+    /* Image small */
+    .card-img {
+        width: 100%;
+        max-height: 110px;
+        margin-top: 8px;
+    }
+
+}

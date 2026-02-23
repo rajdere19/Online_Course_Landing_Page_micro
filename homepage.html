@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Craft Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="homepage.css" rel="stylesheet">
+
+    <!-- Lottie Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="TopMenu">
+    <label> Course Craft</label>
+</div>
+
+<div class="container">
+
+    <!-- LOTTIE ANIMATION -->
+    <div id="lottie-container"></div>
+
+    <!-- COURSE CARDS -->
+
+    <div class="card-grid">
+
+        <div class="card card-1" onclick="location.href='Courses/web-development.html'">
+            <div class="card-content">
+                <h3>Web Development Bootcamp</h3>
+                <p>Learn HTML, CSS, JavaScript, and build real-world websites.</p>
+            </div>
+            <img src="Images/course1.png" class="card-img">
+        </div>
+
+        <div class="card card-2" onclick="location.href='Courses/digital-markiting.html'">
+            <div class="card-content">
+                <h3>Digital Marketing Mastery</h3>
+                <p>SEO, social media, Google Ads, email & analytics.</p>
+            </div>
+            <img src="Images/course2.png" class="card-img">
+        </div>
+
+        <div class="card card-3" onclick="location.href='Courses/ui-ux.html'">
+            <div class="card-content">
+                <h3>UI/UX Design Fundamentals</h3>
+                <p>Design user-friendly websites and apps.</p>
+            </div>
+            <img src="Images/course3.png" class="card-img">
+        </div>
+
+        <div class="card card-4" onclick="location.href='Courses/data-analytics.html'">
+            <div class="card-content">
+                <h3>Data Analytics & Visualization</h3>
+                <p>Excel, SQL, Power BI & Tableau skills.</p>
+            </div>
+            <img src="Images/course4.png" class="card-img">
+        </div>
+
+        <div class="card card-5" onclick="location.href='Courses/python.html'">
+            <div class="card-content">
+                <h3>Python Programming</h3>
+                <p>Automation and beginner projects.</p>
+            </div>
+            <img src="Images/course5.png" class="card-img">
+        </div>
+
+        <div class="card card-6" onclick="location.href='Courses/entrepreneurship.html'">
+            <div class="card-content">
+                <h3>Entrepreneurship Basics</h3>
+                <p>Startup, branding & funding ideas.</p>
+            </div>
+            <img src="Images/course6.png" class="card-img">
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Load animation AFTER page loads -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    lottie.loadAnimation({
+        container: document.getElementById('lottie-container'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'homepage.json'   // make sure this file exists here
+    });
+});
+</script>
+
+</body>
+</html>
